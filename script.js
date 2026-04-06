@@ -8,15 +8,4 @@ const observer = new IntersectionObserver(entries => {
   });
 });
 
-elements.forEach(el => observer.observe(el));const videos = document.querySelectorAll("iframe");
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const iframe = entry.target;
-      iframe.src += "&autoplay=1";
-    }
-  });
-});
-
-videos.forEach(video => observer.observe(video));
+elements.forEach(el => observer.observe(el));
